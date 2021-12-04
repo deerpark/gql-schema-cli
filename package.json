@@ -1,0 +1,21 @@
+{
+  "name": "gql-schema-cli",
+  "version": "1.0.0",
+  "description": "You can easily generate graphql schema.",
+  "main": "index.js",
+  "author": "deerpark",
+  "license": "MIT",
+  "bin": {
+    "gsc": "index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "commander": "^8.3.0",
+    "inquirer": "^8.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deerpark/gql-schema-cli.git"
+  }
+}
