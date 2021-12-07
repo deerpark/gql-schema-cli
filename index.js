@@ -23,6 +23,7 @@ const getTemplate = (key, schema, schemaType) => {
     {  },
     { loggedInUser }
   ) => {
+    const { id } = loggedInUser
     if () {
       return {
         ok: true,
@@ -37,7 +38,7 @@ const getTemplate = (key, schema, schemaType) => {
   
   export default {
     Mutation: {
-      editProfile: protectedResolver(${schema}ResolverFn),
+      ${schema}: protectedResolver(${schema}ResolverFn),
     },
   }
   `
@@ -50,14 +51,8 @@ const getTemplate = (key, schema, schemaType) => {
       error: String
     }
     type ${type} {
-      editProfile(
-        firstName: String
-        lastName: String
+      ${schema}(
         username: String
-        email: String
-        password: String
-        bio: String
-        avatar: Upload
       ): ${capitalize(schema)}Result!
     }
   \`
